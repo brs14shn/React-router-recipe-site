@@ -2,8 +2,20 @@ import React from "react";
 import mealSvg from "../assets/meal2.svg";
 import { Link } from "react-router-dom";
 import "../style/Login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [username, setUserName] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // sessionStorage.setItem("username", username);
+    // sessionStorage.setItem("password", password);
+    // navigate("/home");
+    window.location.href = "/home";
+  };
   return (
     <div className="wrapper">
       <div className="bgStyled d-flex flex-column align-items-center justify-content-center">
@@ -20,22 +32,27 @@ const Login = () => {
             </Link>
           </div>
 
-          <form className="text-center p-3 ">
+          <form onSubmit={handleSubmit} className="text-center p-3 ">
             <div className="mb-3 FormStyledInput">
               <input
-                type="email"
+                onChange={(e) => setUserName(e.target.value)}
+                type="text"
                 className="form-control FormStyledInput"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="username"
+                value={username}
                 placeholder="USERNAME"
+                required
               />
             </div>
             <div className="mb-3 FormStyledInput">
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 className="form-control FormStyledInput"
-                id="exampleInputPassword1"
+                id="password"
+                value={password}
                 placeholder="PASSWORD"
+                required
               />
             </div>
 

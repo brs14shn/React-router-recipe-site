@@ -7,3 +7,10 @@
 span{
     color:  #02475e;
 }
+
+.navbar-brand{
+    color: #02475e;
+    font-family: "Girassol", cursive;
+  font-size: 5rem;
+  padding: 0.5rem;
+}

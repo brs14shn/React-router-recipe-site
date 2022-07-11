@@ -16,7 +16,7 @@ function Nav() {
     <nav class="navbar navbar-expand-lg bgColor ">
       <div class="container-fluid fs-2 font-italic">
         <Link class="navbar-brand fw-bold " to="/">
-          {`<brs14shn>`} <span className="">RECİPE</span>
+          BARIS'S KİTCHEN/<span className="">RECİPE</span>
         </Link>
         <button
           class="navbar-toggler"
@@ -30,15 +30,15 @@ function Nav() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
-            <li className="nav-item">
+          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item border border-danger w-50 d-flex justify-content-around">
+            <li className="  ">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
                 to="/about"
                 className="nav-link active"
                 aria-current="page"
               >
-                About
+                ABOUT
               </NavLink>
             </li>
 
@@ -57,11 +57,11 @@ function Nav() {
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
                 onClick={handleClick}
-                to="/"
+                to="/login"
                 className="nav-link"
                 aria-current="page"
               >
-                Logout
+                LOGOUT
               </NavLink>
             </li>
           </ul>
