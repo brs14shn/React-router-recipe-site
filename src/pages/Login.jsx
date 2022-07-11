@@ -11,11 +11,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // sessionStorage.setItem("username", username);
-    // sessionStorage.setItem("password", password);
-    // navigate("/home");
-    window.location.href = "/home";
+    sessionStorage.setItem("username", JSON.stringify(username));
+    sessionStorage.setItem("password", JSON.stringify(password));
+    navigate("/home");
+    // window.location.href = "/home";
   };
+
   return (
     <div className="wrapper">
       <div className="bgStyled d-flex flex-column align-items-center justify-content-center">

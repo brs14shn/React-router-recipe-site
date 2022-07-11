@@ -30,7 +30,7 @@ function Nav() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item border border-danger w-50 d-flex justify-content-around">
+          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item  w-50 d-flex justify-content-around">
             <li className="  ">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
