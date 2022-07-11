@@ -1,12 +1,22 @@
+import React from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
+
 function Nav() {
+  const [isOpen, setIsOpen] = React.useState(
+    sessionStorage.getItem("email") || false
+  );
+
+  const handleClick = () => {
+    setIsOpen(false);
+    sessionStorage.clear();
+  };
+
   return (
     <nav class="navbar navbar-expand-lg bgColor ">
       <div class="container-fluid fs-2 font-italic">
         <Link class="navbar-brand fw-bold " to="/">
-          {`<brs14shn>`}{" "}
-          <span className="text-info border border-black">RECİPE</span>
+          {`<brs14shn>`} <span className="">RECİPE</span>
         </Link>
         <button
           class="navbar-toggler"
@@ -33,18 +43,20 @@ function Nav() {
             </li>
 
             <li className="nav-item">
-              <NavLink
+              <a href="https://github.com/brs14shn">GİTHUB</a>
+              {/* <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
                 to="https://github.com/brs14shn"
                 className="nav-link"
                 aria-current="page"
               >
                 Github
-              </NavLink>
+              </NavLink> */}
             </li>
             <li className="nav-item">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
+                onClick={handleClick}
                 to="/"
                 className="nav-link"
                 aria-current="page"
