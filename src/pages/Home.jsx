@@ -23,7 +23,7 @@ const Home = () => {
   };
 
   return (
-    <div className=" styled">
+    <div className=" styled bg-info">
       <h1 className="text-center">Food App</h1>
       <div className="container mb-3 d-flex justify-content-center gap-3  ">
         <input
@@ -48,7 +48,7 @@ const Home = () => {
           <option value="Teatime">Teatime</option>
         </select>
       </div>
-      <div>
+      <div className="container d-flex flex-wrap justify-content-around p-2 bg-danger">
         {recipies?.map((recipe, index) => {
           return <RecipeCard {...recipe} key={index} />;
         })}
