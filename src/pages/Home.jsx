@@ -65,7 +65,5 @@ export default Home;
 //* API
 // APIKEY=280a9f0207045a7b1eb040071263aca6
 // APIID=742d542a
-
 // https://developer.edamam.com/edamam-docs-recipe-api
-
 //https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}.
