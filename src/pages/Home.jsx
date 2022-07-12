@@ -1,9 +1,10 @@
 import React from "react";
 import "../style/Home.css";
 import axios from "axios";
+import RecipeCard from "./RecipeCard";
 
 const Home = () => {
-  const [recipes, setRecipes] = React.useState([]);
+  const [recipies, setRecipes] = React.useState([]);
   const [query, setQuery] = React.useState("");
   const [mealType, setMealType] = React.useState("Breakfast");
 
