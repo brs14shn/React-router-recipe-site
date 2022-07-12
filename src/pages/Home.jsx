@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div className=" styled">
       <h1 className="text-center">Food App</h1>
-      <div className="container mb-3 d-flex justify-content-center gap-3  w-50 ">
+      <div className="container mb-3 d-flex flex-column justify-content-center gap-3 w-50 flex-sm-row">
         <input
           className="bg-white"
           type="search"

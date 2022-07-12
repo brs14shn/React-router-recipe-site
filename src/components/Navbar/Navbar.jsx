@@ -3,18 +3,17 @@ import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
-  const [isOpen, setIsOpen] = React.useState(
-    sessionStorage.getItem("username") || true
-  );
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const handleClick = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     sessionStorage.clear();
+    console.log(isOpen);
   };
 
-  const handleLoginClick = () => {
-    alert(`Enter username and password`);
-  };
+  // const handleLoginClick = () => {
+  //   alert(`Enter username and password`);
+  // };
 
   return (
     <nav className="navbar navbar-expand-lg bgColor ">
@@ -52,14 +51,6 @@ function Nav() {
 
               <li className="nav-item">
                 <a href="https://github.com/brs14shn">GİTHUB</a>
-                {/* <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
-                to="https://github.com/brs14shn"
-                className="nav-link"
-                aria-current="page"
-              >
-                Github
-              </NavLink> */}
               </li>
               <li className="nav-item">
                 <NavLink
@@ -76,9 +67,9 @@ function Nav() {
           </div>
         ) : (
           <NavLink
-            onClick={handleLoginClick}
+            onClick={handleClick}
             to="/login"
-            className="nav-link login "
+            className="nav-link login"
             aria-current="page"
           >
             LOGİN
