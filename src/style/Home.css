@@ -1,0 +1,13 @@
+.styled{
+    min-height: calc(100vh - 100px);
+}
+input{
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-family: "Girassol", cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    outline: none;
+}
