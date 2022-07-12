@@ -8,7 +8,9 @@ const Home = () => {
   const [query, setQuery] = React.useState("pizza");
   const [mealType, setMealType] = React.useState("Breakfast");
 
-  let API_KEY = process.env.REACT_APP_API_KEY;
+  // let API_KEY = process.env.REACT_APP_API_KEY;
+  let API_KEY = "280a9f0207045a7b1eb040071263aca6";
+
   let API_ID = "742d542a";
   const url = `https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&mealType=${mealType}`;
 
