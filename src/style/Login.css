@@ -1,9 +1,10 @@
 .wrapper{
-    background-image: url("https://picsum.photos/1600/900");
-    background-size: cover;
+    background-image: url(../assets/recipe.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     min-height: calc(100vh - 100px);
-    
-    margin:auto
+    /* margin:auto */
 }
 .bgStyled{
     background-color:#00adb5;

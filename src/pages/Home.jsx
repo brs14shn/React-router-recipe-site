@@ -5,7 +5,7 @@ import RecipeCard from "./RecipeCard";
 
 const Home = () => {
   const [recipies, setRecipes] = React.useState([]);
-  const [query, setQuery] = React.useState("");
+  const [query, setQuery] = React.useState("pizza");
   const [mealType, setMealType] = React.useState("Breakfast");
 
   let API_KEY = process.env.REACT_APP_API_KEY;

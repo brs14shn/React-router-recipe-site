@@ -17,3 +17,8 @@ color:white;
 font-size: 5rem;
 padding: 0.5rem;
 }
+
+.login{
+    font-family: 'Lobster', cursive; 
+    margin-right: 3rem;
+}

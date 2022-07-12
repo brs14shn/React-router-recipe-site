@@ -4,12 +4,16 @@ import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   const [isOpen, setIsOpen] = React.useState(
-    sessionStorage.getItem("email") || false
+    sessionStorage.getItem("username") || true
   );
 
   const handleClick = () => {
     setIsOpen(false);
     sessionStorage.clear();
+  };
+
+  const handleLoginClick = () => {
+    alert(`Enter username and password`);
   };
 
   return (
@@ -29,22 +33,26 @@ function Nav() {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item  w-50 d-flex justify-content-around align-items-center ">
-            <li className="  ">
-              <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
-                to="/about"
-                className="nav-link active"
-                aria-current="page"
-              >
-                ABOUT
-              </NavLink>
-            </li>
+        {isOpen ? (
+          <div
+            className="collapse navbar-collapse "
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item  w-50 d-flex justify-content-around align-items-center ">
+              <li className="  ">
+                <NavLink
+                  style={({ isActive }) => ({ color: isActive && "red" })}
+                  to="/about"
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  ABOUT
+                </NavLink>
+              </li>
 
-            <li className="nav-item">
-              <a href="https://github.com/brs14shn">GİTHUB</a>
-              {/* <NavLink
+              <li className="nav-item">
+                <a href="https://github.com/brs14shn">GİTHUB</a>
+                {/* <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
                 to="https://github.com/brs14shn"
                 className="nav-link"
@@ -52,20 +60,30 @@ function Nav() {
               >
                 Github
               </NavLink> */}
-            </li>
-            <li className="nav-item">
-              <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
-                onClick={handleClick}
-                to="/login"
-                className="nav-link"
-                aria-current="page"
-              >
-                LOGOUT
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  style={({ isActive }) => ({ color: isActive && "red" })}
+                  onClick={handleClick}
+                  to="/login"
+                  className="nav-link"
+                  aria-current="page"
+                >
+                  LOGOUT
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <NavLink
+            onClick={handleLoginClick}
+            to="/login"
+            className="nav-link login "
+            aria-current="page"
+          >
+            LOGİN
+          </NavLink>
+        )}
       </div>
     </nav>
   );
