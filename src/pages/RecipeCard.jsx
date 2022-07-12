@@ -7,12 +7,13 @@ const RecipeCard = ({ recipe, index }) => {
   console.log(recipe);
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate("/details", { state: { recipe } });
+  };
+
   return (
     <div className="row text-center">
-      <div
-        className="  card g-3 bg-light cardStyled"
-        style={{ width: "18rem" }}
-      >
+      <div className="  card g-3  cardStyled" style={{ width: "18rem" }}>
         <img
           src={image}
           className="card-img-top d-block mx-auto mt-3"
@@ -21,7 +22,9 @@ const RecipeCard = ({ recipe, index }) => {
         />
         <div className="card-body text-center">
           <p className="card-text">{label}</p>
-          <button className="btn btn-danger">View More</button>
+          <button onClick={handleClick} className="btn btn-danger">
+            View More
+          </button>
         </div>
       </div>
     </div>

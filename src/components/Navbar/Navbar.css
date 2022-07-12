@@ -1,16 +1,19 @@
-.bgColor{
-    background-color: #00adb5;
-    font-family: "Girassol", cursive;
-    padding: 0.5rem;
-    background-color: #E1F1DD;
+ul{
+    font-family: 'Lobster', cursive;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+}
+ul > a{
+    text-decoration: none;
 }
 span{
     color:  #02475e;
 }
 
-.navbar-brand{
+
+
+.Link{
 color:white;
-font-family: "Girassol", cursive;
 font-size: 5rem;
 padding: 0.5rem;
 }

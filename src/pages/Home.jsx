@@ -23,9 +23,9 @@ const Home = () => {
   };
 
   return (
-    <div className=" styled bg-info">
+    <div className=" styled">
       <h1 className="text-center">Food App</h1>
-      <div className="container mb-3 d-flex justify-content-center gap-3  ">
+      <div className="container mb-3 d-flex justify-content-center gap-3  w-50 ">
         <input
           className="bg-white"
           type="search"
@@ -38,7 +38,8 @@ const Home = () => {
         </button>
         <select
           onChange={(e) => setMealType(e.target.value)}
-          class="form-select w-25"
+          class="form-select"
+          style={{ width: "10rem" }}
           aria-label="Default select example"
         >
           <option value="Breakfast">Breakfast</option>
@@ -48,7 +49,7 @@ const Home = () => {
           <option value="Teatime">Teatime</option>
         </select>
       </div>
-      <div className="container d-flex flex-wrap justify-content-around p-2 bg-danger">
+      <div className="container d-flex flex-wrap justify-content-around bg-secondary">
         {recipies?.map((recipe, index) => {
           return <RecipeCard {...recipe} key={index} />;
         })}

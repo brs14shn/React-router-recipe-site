@@ -12,7 +12,7 @@
     width: clamp(500px,50%,550px);
     border: 1px solid white;
     line-height: 1;
-    opacity: .8;
+    opacity: .9;
    
 }
 .navbar-brand{

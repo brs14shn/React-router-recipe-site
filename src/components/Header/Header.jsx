@@ -4,9 +4,9 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="container-fluid bgColor">
+    <header className="container-fluid ">
       <Navbar />
-    </div>
+    </header>
   );
 };
 

@@ -16,7 +16,7 @@ function Nav() {
     <nav className="navbar navbar-expand-lg bgColor ">
       <div className="container-fluid fs-2 font-italic">
         <Link className="navbar-brand fw-bold " to="/">
-          BARIS'S KİTCHEN/<span className="">RECİPE</span>
+          Barıs's Kitchen/<span className="">Recipe 👨‍🍳</span>
         </Link>
         <button
           class="navbar-toggler"
@@ -30,7 +30,7 @@ function Nav() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item  w-50 d-flex justify-content-around">
+          <ul className="navbar-nav ms-auto mb-2  mb-lg-0  nav-item  w-50 d-flex justify-content-around align-items-center ">
             <li className="  ">
               <NavLink
                 style={({ isActive }) => ({ color: isActive && "red" })}
