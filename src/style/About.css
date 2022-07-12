@@ -1,0 +1,10 @@
+.bgColor{
+    background-color:#00adb5;
+}
+
+span{
+    color: white;
+    font-family: "Girassol", cursive;
+    font-size: 2rem;
+    padding: 0.5rem;  
+}

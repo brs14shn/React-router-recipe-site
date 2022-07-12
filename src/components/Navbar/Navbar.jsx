@@ -13,9 +13,9 @@ function Nav() {
   };
 
   return (
-    <nav class="navbar navbar-expand-lg bgColor ">
-      <div class="container-fluid fs-2 font-italic">
-        <Link class="navbar-brand fw-bold " to="/">
+    <nav className="navbar navbar-expand-lg bgColor ">
+      <div className="container-fluid fs-2 font-italic">
+        <Link className="navbar-brand fw-bold " to="/">
           BARIS'S KİTCHEN/<span className="">RECİPE</span>
         </Link>
         <button

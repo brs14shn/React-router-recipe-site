@@ -29,7 +29,7 @@ const Login = () => {
               style={{ width: "150px" }}
             />
             <Link className="navbar-brand fw-bold mb-4   " to="/">
-              {`<brs14shn>`} <span className="">RECİPE</span>
+              <span className="">RECİPE</span>
             </Link>
           </div>
 
