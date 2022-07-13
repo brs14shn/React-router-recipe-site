@@ -25,11 +25,21 @@ const Details = () => {
       }}
     >
       <div
-        className="container mt-3 d-flex flex-column justify-content-evenly align-items-center flex-sm-row"
-        style={{ height: "15vh", backgroundColor: "#AEF3F5" }}
+        className="container d-flex flex-column justify-content-evenly align-items-center flex-sm-row"
+        style={{ height: "15vh", marginTop: "2rem" }}
       >
         <h1 className="fs-4 fw-bold">{recipe.label}</h1>
-        <img src={MealSvg} style={{ width: "100px" }} alt="diet" />
+        <div
+          className="bg-info"
+          style={{ borderRadius: "50%", padding: "3rem" }}
+        >
+          <img
+            className=""
+            src={MealSvg}
+            style={{ width: "100px" }}
+            alt="diet"
+          />
+        </div>
       </div>
       <div
         className="container border border-dark bg-secondary  d-flex justify-content-around align-items-center mt-5"

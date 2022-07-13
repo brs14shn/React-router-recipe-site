@@ -1,5 +1,5 @@
 .wrapper{
-    background-image: url(../assets/recipe.jpg);
+    background-image: url(../assets/cook2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,7 +28,7 @@
 
 
 ::placeholder{
-    font-size: 1.5rem;
+    font-size: .9rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .FormStyledInput{
@@ -37,7 +37,7 @@
   padding: 0.5rem 1rem;
   border: none; 
   border-radius: 0.3rem;
-  font-family: "Girassol", cursive;
+  font-family:'Times New Roman', Times, serif;
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
