@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = React.useState("");
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     sessionStorage.setItem("username", JSON.stringify(username));
     sessionStorage.setItem("password", JSON.stringify(password));
     console.log(username);

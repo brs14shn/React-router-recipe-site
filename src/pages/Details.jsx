@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import MealSvg from "../assets/diet.svg";
 import "../style/Details.css";
+
 const Details = () => {
   const location = useLocation();
   const recipe = location.state.recipe;
