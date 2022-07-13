@@ -43,7 +43,7 @@ const Details = () => {
         </div>
       </div>
       <div
-        className="container border border-dark bg-secondary  d-flex justify-content-around align-items-center mt-5"
+        className="container border border-dark bg-secondary d-flex flex-column justify-content-around align-items-center mt-5 flex-sm-row"
         style={{
           height: "40vh",
           borderTopLeftRadius: "40px",
