@@ -26,7 +26,7 @@ const Details = () => {
       }}
     >
       <div
-        className="container d-flex flex-column justify-content-evenly align-items-center flex-sm-row"
+        className="container d-flex flex-column justify-content-evenly align-items-center flex-sm-row mt-sm-5"
         style={{ height: "15vh", marginTop: "2rem" }}
       >
         <h1 className="fs-4 fw-bold">{recipe.label}</h1>
