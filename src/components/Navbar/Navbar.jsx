@@ -4,15 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   const [isOpen, setIsOpen] = React.useState(
-    sessionStorage.getItem("username") ||
-      sessionStorage.getItem("password") ||
-      false
+    sessionStorage.getItem("username") || false
   );
 
   console.log(isOpen);
 
   const handleClick = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     sessionStorage.clear();
   };
 
