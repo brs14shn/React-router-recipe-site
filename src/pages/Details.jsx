@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import MealSvg from "../assets/diet.svg";
+import "../style/Details.css";
 const Details = () => {
   const location = useLocation();
   const recipe = location.state.recipe;
@@ -17,17 +18,38 @@ const Details = () => {
   } = recipe.totalNutrients;
 
   return (
-    <div className="">
+    <div
+      className="container detailsDiv"
+      style={{
+        height: "80vh",
+      }}
+    >
       <div
         className="container mt-3 d-flex flex-column justify-content-evenly align-items-center flex-sm-row"
-        style={{ height: "15vh", backgroundColor: "pink" }}
+        style={{ height: "15vh", backgroundColor: "#AEF3F5" }}
       >
         <h1 className="fs-4 fw-bold">{recipe.label}</h1>
         <img src={MealSvg} style={{ width: "100px" }} alt="diet" />
       </div>
-      <div className="container border border-dark bg-info  d-flex justify-content-around align-items-center">
+      <div
+        className="container border border-dark bg-secondary  d-flex justify-content-around align-items-center mt-5"
+        style={{
+          height: "40vh",
+          borderTopLeftRadius: "40px",
+          borderBottomRightRadius: "40px",
+        }}
+      >
         <div>
+          <img
+            className="img-thumbnail"
+            style={{ width: "300px" }}
+            src={recipe.image}
+            alt=""
+          />
+        </div>
+        <div className="text-white">
           <h3>Nutrients</h3>
+
           <p className="m-0">
             {ca.label} : {Math.round(ca.quantity)} {ca.unit}
           </p>
@@ -51,21 +73,14 @@ const Details = () => {
             {sug.label} : {Math.round(sug.quantity)}
           </p>
         </div>
-        <div>
-          <img
-            className="img-thumbnail"
-            style={{ width: "300px" }}
-            src={recipe.image}
-            alt=""
-          />
-        </div>
-        <div>
+
+        <div className="text-white">
           <h3>Ingredients</h3>
           <ol>
             {recipe.ingredients.map((ingredient) => {
               return (
                 <li
-                  className="text-dark"
+                  className=""
                   style={{ fontSize: ".7rem", textAlign: "left" }}
                 >
                   {ingredient.text}
