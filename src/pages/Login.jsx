@@ -12,8 +12,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     // e.preventDefault();
     sessionStorage.setItem("username", JSON.stringify(username));
-    // sessionStorage.setItem("password", JSON.stringify(password));
+    sessionStorage.setItem("password", JSON.stringify(password));
+    console.log(username);
     navigate("/home");
+
     // window.location.href = "/home";
   };
 
